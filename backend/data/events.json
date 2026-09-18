@@ -1,0 +1,30 @@
+[
+  {
+    "id": "6df1f73e-7603-4466-954e-0fa1562ba884",
+    "title": "Distributed Algorithms",
+    "type": "periodic",
+    "category": "study",
+    "startTime": "14:15",
+    "endTime": "17:00",
+    "weekdays": [
+      4
+    ],
+    "endDate": "2026-12-19",
+    "notes": "",
+    "createdAt": "2026-09-17T11:48:59.109Z"
+  },
+  {
+    "id": "87ebf3d5-7c38-4e2f-b95b-70a66d2b3e42",
+    "title": "Applied Optimization",
+    "type": "periodic",
+    "category": "study",
+    "startTime": "09:15",
+    "endTime": "12:00",
+    "weekdays": [
+      4
+    ],
+    "endDate": "2026-12-19",
+    "notes": "",
+    "createdAt": "2026-09-17T11:49:45.638Z"
+  }
+]

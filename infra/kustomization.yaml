@@ -1,0 +1,29 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: studmanager
+
+resources:
+  - namespace.yaml
+  - pvc.yaml
+  - deployment.yaml
+  - service.yaml
+  - ingress.yaml
+
+# Override the image name/tag before applying.
+# Replace OWNER with your GitHub username/org, and set the desired tag.
+#   kubectl apply -k infra/
+# or use: kustomize edit set image studmanager=ghcr.io/OWNER/studmanager:v1.0.0
+images:
+  - name: studmanager
+    newName: ghcr.io/OWNER/studmanager   # <-- replace OWNER
+    newTag: main
+
+# Secret is generated from infra/secrets.env (gitignored, never committed).
+# Copy infra/secrets.env.example -> infra/secrets.env and fill in values.
+secretGenerator:
+  - name: studmanager-secrets
+    envs:
+      - secrets.env
+    options:
+      disableNameSuffixHash: true
